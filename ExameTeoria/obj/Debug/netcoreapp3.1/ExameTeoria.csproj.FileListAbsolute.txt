@@ -1,0 +1,13 @@
+C:\Users\gabri\source\repos\ExameTeoria\ExameTeoria\bin\Debug\netcoreapp3.1\ExameTeoria.exe
+C:\Users\gabri\source\repos\ExameTeoria\ExameTeoria\bin\Debug\netcoreapp3.1\ExameTeoria.deps.json
+C:\Users\gabri\source\repos\ExameTeoria\ExameTeoria\bin\Debug\netcoreapp3.1\ExameTeoria.runtimeconfig.json
+C:\Users\gabri\source\repos\ExameTeoria\ExameTeoria\bin\Debug\netcoreapp3.1\ExameTeoria.runtimeconfig.dev.json
+C:\Users\gabri\source\repos\ExameTeoria\ExameTeoria\bin\Debug\netcoreapp3.1\ExameTeoria.dll
+C:\Users\gabri\source\repos\ExameTeoria\ExameTeoria\bin\Debug\netcoreapp3.1\ExameTeoria.pdb
+C:\Users\gabri\source\repos\ExameTeoria\ExameTeoria\obj\Debug\netcoreapp3.1\ExameTeoria.csprojAssemblyReference.cache
+C:\Users\gabri\source\repos\ExameTeoria\ExameTeoria\obj\Debug\netcoreapp3.1\ExameTeoria.csproj.CoreCompileInputs.cache
+C:\Users\gabri\source\repos\ExameTeoria\ExameTeoria\obj\Debug\netcoreapp3.1\ExameTeoria.AssemblyInfoInputs.cache
+C:\Users\gabri\source\repos\ExameTeoria\ExameTeoria\obj\Debug\netcoreapp3.1\ExameTeoria.AssemblyInfo.cs
+C:\Users\gabri\source\repos\ExameTeoria\ExameTeoria\obj\Debug\netcoreapp3.1\ExameTeoria.dll
+C:\Users\gabri\source\repos\ExameTeoria\ExameTeoria\obj\Debug\netcoreapp3.1\ExameTeoria.pdb
+C:\Users\gabri\source\repos\ExameTeoria\ExameTeoria\obj\Debug\netcoreapp3.1\ExameTeoria.genruntimeconfig.cache
