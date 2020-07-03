@@ -6,19 +6,19 @@ namespace ExameTeoria.data
 {
     class Data
     {
-        private String[,] matrizNohs;
+        private int[,] matrizNohs;
         private List<Noh> nohList;
         public List<Noh> NohList
         {
             get { return nohList; }
         }
-        public String[,] MatrizNoh
+        public int[,] MatrizNoh
         {
             get { return matrizNohs; }
         }
         public void StartMatriz(int size)
         {
-            matrizNohs = new String[size, size];
+            matrizNohs = new int[size, size];
         }
 
         public void StartNohList(List<Noh> nohs)

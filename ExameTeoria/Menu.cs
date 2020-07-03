@@ -94,25 +94,25 @@ namespace ExameTeoria
             }
 
             List<Noh> nohs = new List<Noh>();
-            char[] alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
+            char[] alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
 
             for (int i = 0; i < size; i++)
             {
                 Console.WriteLine("Informe o nome do ponto");
 
-                nohs.Add(new Noh($"{alpha[i]}"));
+                nohs.Add(new Noh($"{alfabeto[i]}"));
 
                 for (int y = 0; y < size; y++)
                 {
                     if (i != y)
                     {
                         Console.Write($"Informe o vertice do ponto [{i},{y}]: ");
-                        String value = Console.ReadLine();
+                        int value = int.Parse(Console.ReadLine());
                         data.MatrizNoh[i, y] = value;
                         data.MatrizNoh[y, i] = value;
                     } else
                     {
-                        data.MatrizNoh[i, y] = "0";
+                        data.MatrizNoh[i, y] = 0;
                     }
                     
                 }
@@ -149,12 +149,12 @@ namespace ExameTeoria
 
 
             List<Noh> nohs = new List<Noh>();
-            char[] alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
+            char[] alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
 
 
             for (int i = 0; i < size; i++)
             {
-                nohs.Add(new Noh($"{alpha[i]}"));
+                nohs.Add(new Noh($"{alfabeto[i]}"));
                 for (int y = 0; y < size; y++)
                 {
                     Random rnd = new Random();
@@ -164,19 +164,19 @@ namespace ExameTeoria
                     {
                         if (rand < 5)
                         {
-                            data.MatrizNoh[i, y] = "X";
-                            data.MatrizNoh[y, i] = "X";
+                            data.MatrizNoh[i, y] = 0;
+                            data.MatrizNoh[y, i] = 0;
                         }
                         else
                         {
                             Random random = new Random();
                             int randIn = rnd.Next(0, int.MaxValue);
-                            data.MatrizNoh[i, y] = 1 + "";
-                            data.MatrizNoh[y, i] = 1 + "";
+                            data.MatrizNoh[i, y] = 1;
+                            data.MatrizNoh[y, i] = 1;
                         }
                     } else
                     {
-                        data.MatrizNoh[i, y] = "0";
+                        data.MatrizNoh[i, y] = 0;
                     }
 
                 }
@@ -205,7 +205,10 @@ namespace ExameTeoria
 
         private void Help()
         {
-
+            Console.WriteLine("*********************");
+            Console.WriteLine("--      AJUDA      --");
+            Console.WriteLine("1. A opacao de inserir matriz, use 1 Para informar a existencia de vertice");
+            Console.WriteLine("e 0 para informar a nao existencia de vertice");
         }
     }
 }

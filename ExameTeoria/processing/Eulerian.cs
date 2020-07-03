@@ -25,7 +25,7 @@ namespace ExameTeoria.processing
             Console.WriteLine("Calculando....");
 
             int numeroDeNohs = (int)Math.Sqrt(data.MatrizNoh.Length);
-            int numeroDePossibilidades = numeroDeNohs - 1 ;
+            int numeroDePossibilidades = numeroDeNohs - 1;
 
             for (int i = 0; i < numeroDeNohs; i++)
             {
@@ -34,7 +34,7 @@ namespace ExameTeoria.processing
                 {
                     if (i != y)
                     {
-                        if (Information.IsNumeric(data.MatrizNoh[i, y]))
+                        if (data.MatrizNoh[i, y] == 1)
                         {
                             quantidadeDeNumerosPar++;
                         }

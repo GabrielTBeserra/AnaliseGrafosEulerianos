@@ -6,7 +6,6 @@ namespace ExameTeoria
     {
         static void Main(string[] args)
         {
-
             new Menu(new Data());
         }
     }
