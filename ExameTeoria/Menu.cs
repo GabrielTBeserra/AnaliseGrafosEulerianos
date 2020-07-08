@@ -76,7 +76,7 @@ namespace ExameTeoria
             Console.WriteLine("Para inserir use numeros para representar a existencia de aresta");
             Console.WriteLine("E letras para representar que nao ha uma aresta");
             Console.WriteLine("");
-            Console.WriteLine("Informe o tamanho da matriz");
+            Console.WriteLine("Informe a quantidade de nos");
 
             String matrizSize = Console.ReadLine();
             int size = 0;
@@ -98,8 +98,6 @@ namespace ExameTeoria
 
             for (int i = 0; i < size; i++)
             {
-                Console.WriteLine("Informe o nome do ponto");
-
                 nohs.Add(new Noh($"{alfabeto[i]}"));
 
                 for (int y = 0; y < size; y++)
@@ -110,26 +108,23 @@ namespace ExameTeoria
                         int value = int.Parse(Console.ReadLine());
                         data.MatrizNoh[i, y] = value;
                         data.MatrizNoh[y, i] = value;
-                    } else
+                    }
+                    else
                     {
                         data.MatrizNoh[i, y] = 0;
                     }
-                    
+
                 }
             }
 
             data.StartNohList(nohs);
-
-
 
             OpenMenu();
         }
 
         private void GenerateMatriz()
         {
-            Console.WriteLine("Informe o tamanho da matriz");
-
-
+            Console.WriteLine("Informe a quantidade de nos");
 
             String matrizSize = Console.ReadLine();
             int size = 0;
@@ -164,19 +159,18 @@ namespace ExameTeoria
                     {
                         if (rand < 5)
                         {
-                            data.MatrizNoh[i, y] = 0;
-                            data.MatrizNoh[y, i] = 0;
+                            data.MatrizNoh[i, y] = -1;
+                            data.MatrizNoh[y, i] = -1;
                         }
                         else
                         {
-                            Random random = new Random();
-                            int randIn = rnd.Next(0, int.MaxValue);
                             data.MatrizNoh[i, y] = 1;
                             data.MatrizNoh[y, i] = 1;
                         }
-                    } else
+                    }
+                    else
                     {
-                        data.MatrizNoh[i, y] = 0;
+                        data.MatrizNoh[i, y] = -1;
                     }
 
                 }
@@ -189,13 +183,18 @@ namespace ExameTeoria
 
         private void SeeMatriz()
         {
+            if (data.MatrizNoh == null || data.NohList == null)
+            {
+                Console.WriteLine("Voce deve primeiro informar a matriz para calcular!");
+                return;
+            }
             int size = (int)Math.Sqrt(data.MatrizNoh.Length);
 
             for (int i = 0; i < size; i++)
             {
                 for (int y = 0; y < size; y++)
                 {
-                    Console.Write(String.Format("{0,12:0,000.00}", data.MatrizNoh[i, y]));
+                    Console.Write(String.Format("{0,12:0.0}", data.MatrizNoh[i, y]));
                 }
                 Console.WriteLine("");
             }
@@ -207,8 +206,9 @@ namespace ExameTeoria
         {
             Console.WriteLine("*********************");
             Console.WriteLine("--      AJUDA      --");
-            Console.WriteLine("1. A opacao de inserir matriz, use 1 Para informar a existencia de vertice");
-            Console.WriteLine("e 0 para informar a nao existencia de vertice");
+            Console.WriteLine("1. A opcao de inserir matriz, use numeros positivos para informar a existencia de aresta");
+            Console.WriteLine("e qualquer numero negativo para informar a nao existencia de aresta");
+            OpenMenu();
         }
     }
 }

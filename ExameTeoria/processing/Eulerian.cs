@@ -34,7 +34,7 @@ namespace ExameTeoria.processing
                 {
                     if (i != y)
                     {
-                        if (data.MatrizNoh[i, y] == 1)
+                        if (data.MatrizNoh[i, y] > 0)
                         {
                             quantidadeDeNumerosPar++;
                         }
@@ -62,15 +62,21 @@ namespace ExameTeoria.processing
 
             if (numeroDePars == numeroDePossibilidades)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("O grafo e euleriano");
+                Console.ForegroundColor = ConsoleColor.White;
             }
             else if (numeroDePars == (numeroDePossibilidades - 1) || numeroDePars == (numeroDePossibilidades - 2))
             {
+                Console.ForegroundColor = ConsoleColor.DarkBlue;
                 Console.WriteLine("O grafo e semi-euleriano");
+                Console.ForegroundColor = ConsoleColor.White;
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("O grafo nao e euleriano");
+                Console.ForegroundColor = ConsoleColor.White;
             }
 
         }
