@@ -6,18 +6,15 @@ namespace ExameTeoria.entity
 {
     class Noh
     {
-        public String name { get; set; }
         public Boolean isEulerian { get; set; }
 
-        public Noh(string name, bool isEulerian)
+        public Noh(bool isEulerian)
         {
-            this.name = name;
             this.isEulerian = false;
         }
 
-        public Noh(string name)
+        public Noh()
         {
-            this.name = name;
             this.isEulerian = false;
         }
     }
